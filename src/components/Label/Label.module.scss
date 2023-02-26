@@ -1,0 +1,25 @@
+@import '../../styles/helpers';
+
+.label {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.wide {
+    width: 100%;
+}
+
+.labelText {
+    color: var(--color-grayscale200);
+    margin-bottom: 8px;
+    font-size: rem(12px);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.labelContent {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
