@@ -1,0 +1,21 @@
+@import '../../styles/helpers';
+
+.heading {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.variant {
+    &-h1 {
+        font-size: rem(44px);
+    }
+    &-h2 {
+        font-size: rem(32px);
+    }
+    &-h3 {
+        font-size: rem(24px);
+    }
+}
