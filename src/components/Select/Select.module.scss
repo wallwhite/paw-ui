@@ -1,0 +1,62 @@
+@import '../../styles/helpers';
+
+.select {
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    background-color: var(--color-contrast-white);
+    border: 2px solid var(--color-primary100);
+    border-radius: 12px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzExXzE0OTEpIj4KPHBhdGggZD0iTTYuNTk0MDYgOS4xNzQxMkwxMS43NTM4IDQuMDE0MzFDMTIuMDgyMSAzLjY4NjExIDEyLjA4MjEgMy4xNTM5MSAxMS43NTM4IDIuODI1ODNDMTEuNDI1NiAyLjQ5Nzc1IDEwLjg5MzUgMi40OTc3NSAxMC41NjU1IDIuODI1ODNMNS45OTk5MyA3LjM5MTQ5TDEuNDM0NTggMi44MjYwMUMxLjEwNjM1IDIuNDk3ODcgMC41NzQyNjQgMi40OTc4NyAwLjI0NjE3IDIuODI2MDFDLTAuMDgyMDU2NyAzLjE1NDA5IC0wLjA4MjA1NjcgMy42ODYyMyAwLjI0NjE3IDQuMDE0NDNMNS40MDU5MSA5LjE3NDI2QzUuNTcwMDMgOS4zMzgzMSA1Ljc4NDkyIDkuNDIwMjQgNS45OTk5IDkuNDIwMjRDNi4yMTQ5OCA5LjQyMDI0IDYuNDMwMDIgOS4zMzgxNSA2LjU5NDA2IDkuMTc0MTJaIiBmaWxsPSIjOEM4QzhDIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMTFfMTQ5MSI+CjxyZWN0IHk9IjEyIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09InJvdGF0ZSgtOTAgMCAxMikiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 16px) 50%;
+    transition: all 0.2s ease-in-out;
+
+    &.withElementLeft {
+        select{
+            padding-left: 8px;
+        }
+    }
+
+    &:has(select:focus),
+    &:has(select:active) {
+        border: 2px solid var(--color-primary300);
+    }
+
+    &:has(select:disabled) {
+        background-color: var(--color-grayscale100);
+        border: 2px solid var(--color-grayscale100);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    select {
+        @include size(100%);
+     
+        color: var(--color-grayscale200);
+        padding: 0 16px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.scale {
+    &-s {
+        height: 32px;
+    }
+    &-m {
+        height: 42px;
+    }
+}
+
+.elementLeft {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 4px;
+}

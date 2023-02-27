@@ -1,0 +1,120 @@
+@import '../../styles/helpers';
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-size: rem(14px);
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        @include size(1px);
+
+        clip: rect(0px, 0px, 0px, 0px);
+        position: absolute;
+        border: none;
+        padding: 0;
+        margin:  -1px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .marker {
+        @include size(16px);
+    
+        display: inline-flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &::before {
+            @include size(40px);
+            
+            content: '';
+            position: absolute;
+            margin: 0 auto;
+            background-color: var(--color-grayscale100);
+            border-radius: 40px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.2s ease-in-out;
+        }
+
+        &::after {
+            @include size(100%);
+
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center center;
+            border: 1px solid var(--color-grayscale200);
+            border-radius: 5px;
+            background-color: var(--color-contrast-white);
+            transition: all 0.2s ease-in-out;
+            z-index: 1;
+        }
+    }
+
+    &:hover {
+        .marker {
+            &::before {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    &:has(input[type="checkbox"]:focus) {
+        .marker {
+            &::after {
+                box-shadow: 0 0 0 2px var(--color-primary100);
+                border-color: var(--color-primary200);
+            }
+        }
+    }
+
+    &:has(input[type="checkbox"]:checked) {
+        .marker {
+            &::after {
+                background-color: var(--color-primary300);
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTAgOCI+ICA8cGF0aCBmaWxsPSIjRkZGIiBkPSJNOC4yNDA3NTIzMywwLjM0OTE5ODIwNiBDOC42MDAxODAyNCwtMC4wNzAxMjI3MDM5IDkuMjMxNDgwODgsLTAuMTE4Njc1NTc2IDkuNjUwODAxNzksMC4yNDA3NTIzMyBDMTAuMDcwMTIyNywwLjYwMDE4MDIzNiAxMC4xMTg2NzU2LDEuMjMxNDgwODggOS43NTkyNDc2NywxLjY1MDgwMTc5IEw0LjYxNjI0NzY3LDcuNjUwODAxNzkgQzQuMjQxMTg2MjgsOC4wODgzNjEyNiAzLjU3NDg3MjUyLDguMTE5MTY2MzkgMy4xNjEwMzg2OCw3LjcxODA3OTI3IEwwLjMwNDAzODY3OCw0Ljk0OTA3OTI3IEMtMC4wOTI1NDU1NTIzLDQuNTY0NzEwNDQgLTAuMTAyNDQ4MDk1LDMuOTMxNjIyOTEgMC4yODE5MjA3MywzLjUzNTAzODY4IEMwLjY2NjI4OTU1NSwzLjEzODQ1NDQ1IDEuMjk5Mzc3MDksMy4xMjg1NTE5MSAxLjY5NTk2MTMyLDMuNTEyOTIwNzMgTDMuNzg5NTk2NjgsNS41NDIwNjg4OSBMOC4yNDA3NTIzMywwLjM0OTE5ODIwNiBaIi8+PC9zdmc+);
+                background-repeat: no-repeat;
+                border-color: var(--color-primary300);
+            }
+        }
+    }
+    
+    &:has(input[type="checkbox"]:disabled) {
+        pointer-events: none;
+
+        .marker {
+            &::after {
+                background-color: var(--color-grayscale100);
+                border-color: rgba(140, 140, 140, 0.5);
+            }
+        }
+    }
+
+    &:has(input[type="checkbox"]:disabled):has(input[type="checkbox"]:checked) {
+        .marker {
+            &::after {
+                background-color: var(--color-grayscale200);
+            }
+        }
+    }
+}
+
+.content {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-size: rem(14px);
+    padding-top: 2px;
+    margin-left: 8px;
+    z-index: 1;
+}

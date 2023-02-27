@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    background-color: var(--color-contrast-white);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 32px;
+    width: fit-content;
+}
+
+.wide {
+    width: 100%;
+}
+
+.direction {
+    &-row {
+        flex-direction: row;
+    }
+    &-column {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,41 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;   
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-grayscale100);
+    border-radius: 20px;
+    padding: 0;
+    min-width: 320px;
+    max-width: 736px;
+    min-height: 64px;
+    font-family: var(--font-primary);
+    z-index: 101;
+}
+
+.header {
+    position: absolute;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    padding: 0 64px 0 32px;
+    z-index: 1;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    transform: translateX(50%);
+}

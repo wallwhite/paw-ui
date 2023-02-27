@@ -1,0 +1,43 @@
+@import '../../styles/helpers';
+
+.inputWrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--color-contrast-white);
+    border: 2px solid var(--color-primary100);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+
+    &.scale {
+        &-s {
+            height: 32px;
+        }
+        &-m {
+            height: 42px;
+        }
+    }
+
+    &:has(input:focus),
+    &:has(input:active) {
+        border: 2px solid var(--color-primary200);
+    }
+}
+
+.withElementRight {
+    padding-right: 4px;
+}
+
+.input {
+    @include size(100%);
+    display: inline-flex;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0 16px;
+
+    ::placeholder {
+        color: var(--color-grayscale200);
+    }
+}

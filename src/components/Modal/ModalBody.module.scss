@@ -1,0 +1,9 @@
+.body {
+    position: relative;
+    display: flex;
+    background-color: var(--color-contrast-white);
+
+    &.indentation {
+        padding-top: 64px;
+    }
+}
