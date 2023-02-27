@@ -26,18 +26,33 @@
     "preview": "vite preview",
     "version:patch": "yarn version --patch --no-git-tag-version",
     "version:minor": "yarn version --minor --no-git-tag-version",
-    "version:major": "yarn version --major --no-git-tag-version"
+    "version:major": "yarn version --major --no-git-tag-version",
+    "prestorybook": "yarn build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.14.1",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "@wallwhite/eslint-config-react-ts": "^0.1.5",
+    "babel-loader": "^8.3.0",
     "eslint": "^8.35.0",
     "path": "^0.12.7",
     "react": "^18.2.0",

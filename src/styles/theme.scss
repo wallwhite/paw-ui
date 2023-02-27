@@ -1,3 +1,14 @@
+@import './typography';
+@import './colors';
+
 :root {
-    --color-black: #000000;
+    --color-primary100: #{$primary100};
+    --color-primary200: #{$primary200};
+    --color-primary300: #{$primary300};
+    --color-grayscale100: #{$grayscale100};
+    --color-grayscale200: #{$grayscale200};
+    --color-grayscale300: #{$grayscale300};
+    --color-contrast-black: #{$contrastBlack};
+    --color-contrast-white: #{$contrastWhite};
+    --font-primary: #{$fontInter};
 }
