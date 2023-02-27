@@ -1,0 +1,49 @@
+@import '../../styles/helpers';
+
+.text {
+    font-family: var(--font-primary);
+    display: inline-flex;
+    line-height: 1.2;
+}
+
+.wide {
+    width: 100%;
+}
+
+.type {
+    &-button {
+        font-weight: 500;
+
+        &.scale {
+            &-s {
+                font-size: rem(12px);
+            }
+            &-m {
+                font-size: rem(16px);
+            }
+            &-l {
+                font-size: rem(20px);
+            }
+        }
+    }
+
+    &-body {
+        font-weight: 400;
+
+        &.scale {
+            &-s {
+                font-size: rem(14px);
+            }
+            &-m {
+                font-size: rem(16px);
+            }
+            &-l {
+                font-size: rem(18px);
+            }
+        }
+
+        &.weight-bold {
+            font-weight: 600;  
+        }
+    }
+}
